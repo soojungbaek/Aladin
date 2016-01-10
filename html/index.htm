@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <title>알라딘 검색기</title>
+		<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+        
+        <style type="text/css">
+            .body
+            {
+                width: 320px;
+                max-width: 90%;
+                margin: auto;
+                padding: 1em;
+            }
+            .office
+            {
+                margin: 0.5em;
+            }
+            .office-name
+            {
+                font-size: 1.2em;
+            }
+            .book
+            {
+                font-size: 1em;
+                margin: 1em;
+            }
+        </style>
+                
+        <script type="text/javascript">
+            function search()
+            {
+                
+            }
+        </script>
+        
+    </head>
+    
+    <body class="body">
+        <div class="input-group">
+            <input type="text" id="keyword" class="form-control text-center"/>
+            <div class="input-group-btn">
+                <p class="btn btn-default">검색</p>
+            </div>    
+        </div>
+        <div>
+            <br/>
+        </div>
+        <div>
+            <!-- 검색 결과 샘플 -->
+            <div id="searchResultSample">
+                <div class="office" id="판교가상지점">
+                    <div class="office-name">
+                        <p>판교가상지점</p>
+                    </div>
+                    <div>
+                        <div class="book">
+                            <p>제목</p>
+                            <p>작가</p>
+                            <p>수량</p>
+                            <p>가격</p>
+                            <p>위치</p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+            <!-- 검색 결과 -->
+            <div id="searchResult">
+            </div>
+        </div>
+    </body>
+</html>
