@@ -30,9 +30,9 @@
         </style>
                 
         <script type="text/javascript">
-            function search()
-            {
-                
+            function search(){
+                var x = document.getElementById('search');
+                alert("검색");
             }
         </script>
         
@@ -42,7 +42,7 @@
         <div class="input-group">
             <input type="text" id="keyword" class="form-control text-center"/>
             <div class="input-group-btn">
-                <p class="btn btn-default">검색</p>
+                <p class="btn btn-default" onclick="search()">검색</p>
             </div>    
         </div>
         <div>
