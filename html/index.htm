@@ -31,7 +31,9 @@
                 
         <script type="text/javascript">
             function search(){
-                alert("검색");
+            var x = document.getElementById("keyword").value;
+            document.getElementById("demo").innerHTML = x;
+            alert(x);
             }
         </script>
         
@@ -39,9 +41,10 @@
     
     <body class="body">
         <div class="input-group">
-            <input type="text" id="keyword" class="form-control text-center"/>
+            <input type="text" id="keyword" value="" class="form-control text-center">
             <div class="input-group-btn">
                 <p class="btn btn-default" onclick="search()">검색</p>
+                <p id = "demo"></p> 
             </div>    
         </div>
         <div>
