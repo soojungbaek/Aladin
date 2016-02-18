@@ -30,10 +30,10 @@
         </style>
                 
         <script type="text/javascript">
-            function search(){
-            var x = document.getElementById("keyword").value;
-            document.getElementById("demo").innerHTML = x;
-            alert(x);
+            function search()
+            {
+                var keyword = document.getElementById("keyword").value;
+                alert(keyword);
             }
         </script>
         
@@ -44,7 +44,6 @@
             <input type="text" id="keyword" value="" class="form-control text-center">
             <div class="input-group-btn">
                 <p class="btn btn-default" onclick="search()">검색</p>
-                <p id = "demo"></p> 
             </div>    
         </div>
         <div>
