@@ -32,7 +32,8 @@
         <script type="text/javascript">
             function search()
             {
-                var keyword = document.getElementById("keyword").value;
+                var keyword = document.getElementById('keyword').value;
+                document.getElementById('searches').innerHTML = keyword;
                 alert(keyword);
             }
         </script>
@@ -41,7 +42,7 @@
     
     <body class="body">
         <div class="input-group">
-            <input type="text" id="keyword" value="" class="form-control text-center">
+            <input type="text" id="keyword" value="" class="form-control text-center" onkeypress="if( event.keyCode==13 ){search();}">
             <div class="input-group-btn">
                 <p class="btn btn-default" onclick="search()">검색</p>
             </div>    
@@ -49,8 +50,18 @@
         <div>
             <br/>
         </div>
+        
+        <!--검색 기록-->
         <div>
-            <!-- 검색 결과 샘플 -->
+            <p>검색 기록</p>
+            <p id=searches></p>
+        </div>
+
+        <div>
+            <br/>
+        </div>
+
+        <!-- 검색 결과 샘플 -->
             <div id="searchResultSample">
                 <div class="office" id="판교가상지점">
                     <div class="office-name">
