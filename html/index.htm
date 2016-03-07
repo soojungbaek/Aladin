@@ -30,30 +30,39 @@
         </style>
                 
         <script type="text/javascript">
-            function myFunction()
+            function search()
             {
                 // 검색창에 검색한 내용을 가져옴
-                var keyword = document.getElementById("keyword").value;
-
-                var t = document.createTextNode(keyword);
-                searches.appendChild(t);
-                document.body.appendChild(searches);
-                }
+                var keywordElement = document.getElementById("keyword");
+                var keywordValue = keywordElement.value;
+                
+                // p라는 이름을 가진 element를 만듬
+                var textElement = document.createElement("p");
+                // text 만들기
+                var textNode = document.createTextNode(keywordValue);                
+                textElement.appendChild(textNode);
+                
+                var searchesElement = document.getElementById("searches");
+                searchesElement.appendChild(textElement);
+            }
         </script>
-        
     </head>
     
     <body class="body">
         <div class="input-group">
-            <input type="text" id="keyword" value="" class="form-control text-center" onkeypress="if( event.keyCode==13 ){myFunction();}">
+            <input type="text" id="keyword" value="" class="form-control text-center" onkeypress="if( event.keyCode==13 ){search();}">
             <div class="input-group-btn">
-                <p class="btn btn-default" onclick="myFunction()">검색</p>
+                <p class="btn btn-default" onclick="search()">검색</p>
             </div>    
         </div>
         <div>
             <br/>
         </div>
         
+        <div>
+            <p>검색 기록</p>
+            <div id="searches"></div>
+        </div>
         <!-- 검색 결과 샘플 -->
         <div id="searchResultSample">
             <div class="office" id="판교가상지점">
@@ -75,13 +84,4 @@
             <br/>
         </div>
     </body>
-        
-    <!--검색어 기록-->
-    <body onload = "addElement()">
-        <div id = "keyword">
-            <p>검색 기록</p>
-            <p id="searches"></p>
-        </div>
-    </body>
-  
-</html>
+  </html>
